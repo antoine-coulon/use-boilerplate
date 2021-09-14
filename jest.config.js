@@ -3,9 +3,12 @@ module.exports = {
       './jest.setup.js',
     ],
     collectCoverageFrom: [],
+    transform: {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
     testEnvironment: 'node',
     testMatch: [
-      '**/test/**/*.ts',
+      '**/test/**/*.spec.ts',
     ],
     testPathIgnorePatterns: [
       '/node_modules/',

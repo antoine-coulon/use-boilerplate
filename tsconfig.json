@@ -2,7 +2,7 @@
     "compilerOptions": {
         "module": "commonjs",
         "outDir": "dist",
-        "target": "es2015",
+        "target": "es2021",
         "allowJs": true,
         "baseUrl": "lib",
         "declaration": true,
