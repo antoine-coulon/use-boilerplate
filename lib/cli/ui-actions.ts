@@ -11,7 +11,12 @@ import {
 import useBoilerplates from '../collection/use';
 
 function displayBoilerplatesList(collection: Collection) {
-  divWrapper(cliDefaultFont(`Repositories fetched from : ${REPOSITORY_URL}`));
+  if (Object.keys(collection).length === 0) {
+    divWrapper(cliErrorFont(`No boilerplates could be fetched from ${REPOSITORY_URL}.`));
+    return;
+  }
+
+  divWrapper(cliDefaultFont(`Boilerplates fetched from : ${REPOSITORY_URL}`));
   Object.entries(collection).forEach(([technology, content]) => {
     const { repositories } = content;
     const endLetter = content.repositories.length > 1 ? 'ies' : 'y';
@@ -23,6 +28,8 @@ function displayBoilerplatesList(collection: Collection) {
       );
     });
   });
+
+  divWrapper(cliDefaultFont(`All boilerplates successfully fetched from ${REPOSITORY_URL}`));
 }
 
 async function promptForBoilerplatesChoice(useCwd: boolean) {

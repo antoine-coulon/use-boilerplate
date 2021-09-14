@@ -24,7 +24,7 @@ describe('Local collection fetching', () => {
 
   describe('with one or many keywords', () => {
     it('should get empty collection given (Nodejs) as keyword', async () => {
-      const collection = await fetchCollection(fetcherWithBasicCollection, { keywords: ['Nodejs'] });
+      const collection = await fetchCollection(fetcherWithBasicCollection, { keywords: ['nodejs'] });
       expect(collection).toStrictEqual({});
     });
 
@@ -34,7 +34,7 @@ describe('Local collection fetching', () => {
     });
 
     it('should get two collections (amongst 3) sharing (DDD) as keyword', async () => {
-      const collection = await fetchCollection(fetcherWithCompleteCollection, { keywords: ['DDD', 'gRPC'] });
+      const collection = await fetchCollection(fetcherWithCompleteCollection, { keywords: ['ddd', 'gRpC'] });
       const collectionWithoutReact = {
         Go: { ...collection.Go },
         Nodejs: { ...collection.Nodejs },

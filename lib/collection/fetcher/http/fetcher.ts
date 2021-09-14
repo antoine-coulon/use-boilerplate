@@ -22,9 +22,9 @@ export default class HttpCollectionFetcher implements CollectionFetcher {
   async retrieveCollectionFromGitHub(): Promise<Collection> {
     return new Promise((resolve, reject) => {
       https.get(COLLECTION_DB_URL, (res) => {
-        const data: any = [];
+        let data: string = '';
         res.on('data', (chunk) => {
-          data.push(chunk);
+          data += chunk;
         });
         res.on('end', () => {
           try {

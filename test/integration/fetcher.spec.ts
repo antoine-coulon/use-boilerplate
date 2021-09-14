@@ -9,7 +9,7 @@ describe('Remote collection fetching', () => {
   });
   it('should retrieve collection from GitHub', async () => {
     const collection = await fetchCollection(httpFetcher);
-    expect(collection).toBeDefined();
+    expect(Object.keys(collection).length).toBeGreaterThan(1);
   });
 
   it('should retrieve empty collection when Exception is caught', async () => {
