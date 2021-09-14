@@ -23,7 +23,7 @@ describe('Boilerplates use', () => {
   });
   it('should find one of the two specified repositories in DB', async () => {
     const collection = await fetchCollection(new LocalFetcher(completeCollection));
-    const specifiedRepositories = ['node-api-boilerplate', 'graphql-unknown'];
+    const specifiedRepositories = ['Node-Api-boilerplate', 'graphql-unknown'];
     const repos = findRepositoriesByNames(collection, specifiedRepositories);
     expect(repos).toStrictEqual([expectedRepository]);
   });

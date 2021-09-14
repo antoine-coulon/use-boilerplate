@@ -37,7 +37,7 @@ function findRepositoriesByNames(collection: Collection, names: string[]): Repos
   const technologiesEntries = Object.values(collection);
   technologiesEntries.forEach((technology) => {
     const matches = technology.repositories.filter(
-      (repo) => names.some((name) => name === repo.name),
+      (repo) => names.some((name) => normalizeKeyword(name) === normalizeKeyword(repo.name)),
     );
     if (matches.length > 0) {
       foundRepositories.push(...matches);
