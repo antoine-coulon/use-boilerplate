@@ -3,7 +3,7 @@ import download from 'download-git-repo';
 import fs from 'fs/promises';
 import path from 'path';
 import HttpCollectionFetcher from '../fetcher/http/fetcher';
-import { Repository, DownloadedRepositories, DownloadedRepository } from '../models';
+import { Repository, DownloadedRepository } from '../models';
 import fetchCollection from '../fetcher';
 import { findRepositoriesByNames } from '../shared/collection';
 
@@ -15,8 +15,8 @@ async function prepareDirectoryForRepository(outDir: string): Promise<void> {
 }
 
 async function downloadRepository(
-  repository: Repository, 
-  pathToRepository: string
+  repository: Repository,
+  pathToRepository: string,
 ): Promise<DownloadedRepository> {
   return new Promise((resolve, reject) => {
     download(`${repository.author}/${repository.name}`, pathToRepository, (err: any) => {
@@ -33,7 +33,7 @@ async function downloadRepositories(
 ): Promise<DownloadedRepository[]> {
   const repositoriesDownloads = repositories.map(async (repository) => {
     const pathToRepository = path.join(outDir, repository.name);
-    await prepareDirectoryForRepository(pathToRepository)
+    await prepareDirectoryForRepository(pathToRepository);
     return downloadRepository(repository, pathToRepository);
   });
   // eslint-disable-next-line @typescript-eslint/return-await
