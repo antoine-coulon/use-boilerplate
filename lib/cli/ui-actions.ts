@@ -47,7 +47,7 @@ async function promptForChoices(useCwd: boolean) {
   const { repositories } = await prompt([{
     type: 'input',
     name: 'repositories',
-    message: 'Which directories to use? (comma separated)',
+    message: 'Which boilerplates to use? (comma separated)',
   }]);
   let outDir: string = process.cwd();
   if (!repositories) {

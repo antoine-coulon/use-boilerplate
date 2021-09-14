@@ -7,7 +7,7 @@
     "node": ">=12.18.0"
   },
   "bin": {
-    "boiler": "dist/lib/index.js"
+    "boilerplate": "dist/lib/index.js"
   },
   "files": [
     "lib"
