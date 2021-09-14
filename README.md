@@ -12,13 +12,19 @@
 $ npm install -g use-boilerplate
 ```
 
-List all the boilerplates available from the <a href="https://github.com/antoine-coulon/awesome-universal-boilerplates/blob/master/db/collection.json">Database</a>
+List all the boilerplates available from the <a href="https://github.com/antoine-coulon/awesome-universal-boilerplates/blob/master/db/collection.json">Database</a>.
 
 ```console
 $ boilerplate list
 ```
 
-Download any boilerplate available directly from the CLI
+Use specific keywords to filter the list!
+
+```console
+$ boilerplate list --keywords DDD
+```
+
+Download any boilerplate available directly from the CLI.
 
 ```console
 $ boilerplate use

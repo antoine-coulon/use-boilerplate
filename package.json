@@ -1,6 +1,6 @@
 {
   "name": "use-boilerplate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI that easily scaffolds boilerplates from the 'awesome-universal-boilerplates' repository.",
   "main": "dist/lib/index.js",
   "engines": {
