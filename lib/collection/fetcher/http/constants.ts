@@ -1,4 +1,3 @@
 const COLLECTION_DB_URL = 'https://raw.githubusercontent.com/antoine-coulon/awesome-universal-boilerplates/master/db/collection.json';
-
-// eslint-disable-next-line import/prefer-default-export
-export { COLLECTION_DB_URL };
+const REPOSITORY_URL = 'https://github.com/antoine-coulon/use-boilerplate';
+export { COLLECTION_DB_URL, REPOSITORY_URL };

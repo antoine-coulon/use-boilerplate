@@ -20,6 +20,14 @@ interface RepositoryMetadata {
   popularity: 'low' | 'medium' | 'high';
 }
 
+type DownloadedRepository = Repository & { path: string };
+type DownloadedRepositories = Promise<DownloadedRepository>[];
+
 export {
-  Collection, Technology, Repository, RepositoryMetadata,
+  Collection,
+  Technology,
+  Repository,
+  RepositoryMetadata,
+  DownloadedRepository,
+  DownloadedRepositories,
 };

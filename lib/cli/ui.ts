@@ -12,11 +12,11 @@ const cliSuccessFont = (text: string) => `${greenBright(bold(text))}`;
 const cliErrorFont = (text: string) => `${redBright(bold(text))}`;
 const cliInfoFont = (text: string) => `${yellowBright(bold(text))}`;
 
-const divWrapper = (text: string) => {
+const divWrapper = (text: string, padding = [1, 0, 0, 1]) => {
   ui.div(
     {
       text,
-      padding: [1, 0, 0, 1],
+      padding,
     },
   );
   // eslint-disable-next-line no-console

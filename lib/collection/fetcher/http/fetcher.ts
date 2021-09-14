@@ -1,8 +1,8 @@
 /* eslint-disable class-methods-use-this */
 import https from 'https';
 import { CollectionFetcher } from '../gateway/fetcher.gateway';
-import { Collection } from '../models/collection.interface';
-import { filterSubCollectionByKeywords } from '../shared/collection';
+import { Collection } from '../../models';
+import { filterSubCollectionByKeywords } from '../../shared/collection';
 import { COLLECTION_DB_URL } from './constants';
 
 export default class HttpCollectionFetcher implements CollectionFetcher {

@@ -1,4 +1,4 @@
-import { Collection, Repository } from '../models/collection.interface';
+import { Collection, Repository } from '../models';
 
 function findRepositoriesByKeywords(fKeywords: string[], repositories: Repository[]): Repository[] {
   return repositories.reduce(
@@ -25,4 +25,18 @@ function filterSubCollectionByKeywords(collection: Collection, keywords: string[
   return subCollection;
 }
 
-export { findRepositoriesByKeywords, filterSubCollectionByKeywords };
+function findRepositoriesByNames(collection: Collection, names: string[]): Repository[] {
+  const foundRepositories: Repository[] = [];
+  const technologiesEntries = Object.values(collection);
+  technologiesEntries.forEach((technology) => {
+    const matches = technology.repositories.filter(
+      (repo) => names.some((name) => name === repo.name),
+    );
+    if (matches.length > 0) {
+      foundRepositories.push(...matches);
+    }
+  });
+  return foundRepositories;
+}
+
+export { findRepositoriesByKeywords, filterSubCollectionByKeywords, findRepositoriesByNames };

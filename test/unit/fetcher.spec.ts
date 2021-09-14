@@ -1,5 +1,5 @@
-import fetchCollection from '../../lib/collection-fetcher';
-import LocalFetcher from '../../lib/collection-fetcher/local/fetcher';
+import fetchCollection from '../../lib/collection/fetcher';
+import LocalFetcher from '../../lib/collection/fetcher/local/fetcher';
 import { basicCollection, completeCollection } from '../fixture/collection';
 
 let fetcherWithBasicCollection: LocalFetcher;

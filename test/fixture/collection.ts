@@ -1,4 +1,4 @@
-import { Collection } from '../../lib/collection-fetcher/models/collection.interface';
+import { Collection } from '../../lib/collection/models';
 
 const basicCollection: Collection = {
   Go: {

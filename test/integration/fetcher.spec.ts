@@ -1,6 +1,6 @@
-import { CollectionFetcher } from 'collection-fetcher/gateway/fetcher.gateway';
-import fetchCollection from '../../lib/collection-fetcher';
-import HttpCollectionFetcher from '../../lib/collection-fetcher/http/fetcher';
+import { CollectionFetcher } from 'collection/fetcher/gateway/fetcher.gateway';
+import fetchCollection from '../../lib/collection/fetcher';
+import HttpCollectionFetcher from '../../lib/collection/fetcher/http/fetcher';
 
 describe('Remote collection fetching', () => {
   let httpFetcher: CollectionFetcher & { retrieveCollectionFromGitHub: () => Promise<any> };

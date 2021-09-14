@@ -2,7 +2,7 @@
     "compilerOptions": {
         "module": "commonjs",
         "outDir": "dist",
-        "target": "es2021",
+        "target": "esnext",
         "allowJs": true,
         "baseUrl": "lib",
         "declaration": true,

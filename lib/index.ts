@@ -12,4 +12,10 @@ program
   .option('-k, --keywords', 'Filter by keywords => (ex: nodejs,go,python)', '')
   .action(CLI_ACTIONS.LIST);
 
+program
+  .command('use')
+  .describe('Specify boilerplates to use from DB')
+  .option('-cwd, --currentWorkingDir', 'Download boilerplates in the cwd', false)
+  .action(CLI_ACTIONS.USE);
+
 program.parse(process.argv);

@@ -1,6 +1,6 @@
-import { Collection } from '../models/collection.interface';
+import { Collection } from '../../models';
 import { CollectionFetcher } from '../gateway/fetcher.gateway';
-import { filterSubCollectionByKeywords } from '../shared/collection';
+import { filterSubCollectionByKeywords } from '../../shared/collection';
 
 export default class LocalFetcher implements CollectionFetcher {
   constructor(private readonly collection: Collection) {}
